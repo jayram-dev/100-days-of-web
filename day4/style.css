@@ -1,0 +1,10 @@
+div{
+    height: 309px;
+    width:112px  ;
+    margin: 10px auto;
+    background-color: aqua;
+    text-align: center;
+    box-shadow: 10px 10px 10px rgb(50, 66, 210);
+    background-image: url(image.jpg);
+    background-size: auto;
+}

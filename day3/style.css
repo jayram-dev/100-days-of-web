@@ -1,0 +1,35 @@
+div{
+    text-align: center;
+    background-color: blue;
+    margin: 10px auto;
+    border: thick dashed black ;
+    height: 100px;
+    width: 200px;
+   padding: 20px;
+   
+}
+div:hover{
+    transform: translateX(500px);
+}
+
+/* Smooth transition for transform */
+div{
+    transition: transform 1.5s step-start;
+}
+h1{
+    border: 5px solid red;
+    padding: 20px;
+    height: 200px;
+    width: 200px;
+    transition: transform 2s ease-out ;
+    transition: color  ease ;
+    transition: background-color  ease ;
+    transition: border-radius  ease ;
+}
+h1:hover{
+    transform: scale(0.5,2);
+    border-radius: 50%;
+    background-color: blue;
+    color: rgb(153, 255, 0);
+    
+}
