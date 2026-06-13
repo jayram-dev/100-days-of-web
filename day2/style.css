@@ -1,0 +1,62 @@
+/* Keyword values
+transition-timing-function: ease;
+transition-timing-function: ease-in;
+transition-timing-function: ease-out;
+transition-timing-function: ease-in-out;
+transition-timing-function: linear;
+transition-timing-function: step-start;
+transition-timing-function: step-end;
+
+transition-timing-function: steps(4, jump-end);
+transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+
+
+transition-timing-function: steps(4, jump-start);
+transition-timing-function: steps(10, jump-end);
+transition-timing-function: steps(20, jump-none);
+transition-timing-function: steps(5, jump-both);
+transition-timing-function: steps(6, start);
+transition-timing-function: steps(8, end);
+
+
+transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+
+
+transition-timing-function: inherit;
+transition-timing-function: initial;
+transition-timing-function: revert;
+transition-timing-function: revert-layer;
+transition-timing-function: unset; */
+/* The CSS */
+.multi-transition-box {
+  width: 150px;
+  height: 150px;
+  background-color: #2ecc71;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+
+  /* We define 3 different properties to animate. 
+    They map 1-to-1 with the duration and timing functions below. 
+  */
+  transition-property: transform, background-color, border-radius;
+  
+  /* Transform takes 2s, background takes 1s, border-radius takes 3s */
+  transition-duration: 10s, 1s, 3s;
+
+  /* Mapping from your list:
+    1. transform -> ease
+    2. background-color -> step-start
+    3. border-radius -> cubic-bezier(0.1, 0.7, 1, 0.1)
+  */
+  transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1, 0.1);
+}
+
+/* The hover state providing the end-values for the transition */
+.multi-transition-box:hover {
+  transform: translateX(400px); /* eases over 2s */
+  background-color: #8e44ad;    /* jumps immediately (step-start) */
+  border-radius: 50%;           /* snaps into a circle using the custom cubic-bezier over 3s */
+}
