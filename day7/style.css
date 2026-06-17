@@ -1,0 +1,18 @@
+.con{
+    background-color: antiquewhite;
+    height: 300px;
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    justify-content: flex-start;
+    align-items: baseline;
+    align-content: flex-start;
+    
+}
+.ele{
+    height: 100px;
+    width: 300px;
+ size :10px;;
+}
